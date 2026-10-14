@@ -5,11 +5,6 @@ This README covers:
 - Folder structure and rationale for not tracking data
 - Step-by‑step data filekeeping and download instructions
 
-## Team Members
-- Diya Mohan
-- Indira Bhattacharjee  
-- Sivagama VijayaRajan
-
 ## Project Overview
 This project develops machine learning models for early detection of housing market downturns using the **HouseTS dataset** (ZIP‑code‑level spatiotemporal data from 2012–2023, covering 30 U.S. metropolitan areas). The goal is to predict whether a ZIP code will experience a price drop of more than 10% within the next six months.
 
