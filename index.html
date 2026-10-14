@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Diya Mohan</title>
+<meta name="description" content="Diya Mohan: Georgia Tech MS Analytics, ex Rivian & VW, UPS, Emory Healthcare. Open to product and data roles.">
+<meta property="og:title" content="Diya Mohan">
+<meta property="og:description" content="I like finding the annoying step in someone's day and getting rid of it.">
+<meta name="theme-color" content="#FF2E93">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@500;600;700&family=Archivo:ital,wght@0,400;0,500;0,600;1,400&family=Silkscreen&display=swap">
+<style>
+/* Layout: hot-pink hero and footer, a single quiet reading column between. Lowercase narrow headings, tiny pixel labels, one ticker. Single-theme by choice. */
+:root {
+  --pink: #FF2E93;
+  --pink-deep: #E0006E;
+  --blush: #FFE6F2;
+  --paper: #FFFFFF;
+  --ink: #0A0A0A;
+  --muted: #5E4B55;
+
+  --display: "Archivo Narrow", "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+  --body: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --pixel: "Silkscreen", ui-monospace, "Courier New", monospace;
+  color-scheme: light;
+}
+* { box-sizing: border-box; }
+html { background: var(--paper); scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--body); font-size: 1.05rem; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+.wrap { max-width: 720px; margin: 0 auto; padding-inline: 20px; }
+a { color: inherit; text-decoration-color: var(--pink); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover { color: var(--pink-deep); }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+::selection { background: var(--ink); color: var(--pink); }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+/* top bar */
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--pink); border-bottom: 2px solid var(--ink); }
+.top .wrap { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding-block: 12px; flex-wrap: wrap; max-width: 1040px; }
+.mark { font-family: var(--display); font-weight: 700; font-size: 1.15rem; text-decoration: none; }
+.nav { display: flex; gap: 6px; flex-wrap: wrap; }
+.nav a { font-family: var(--pixel); font-size: 0.66rem; text-decoration: none; border: 1.5px solid var(--ink); border-radius: 999px; padding: 3px 10px; background: var(--paper); }
+.nav a:hover { background: var(--ink); color: var(--pink); }
+
+/* hero */
+.hero { background: var(--pink); }
+.hero .wrap { max-width: 1040px; padding-block: clamp(48px, 9vw, 104px) clamp(36px, 6vw, 64px); }
+.hero h1 { font-family: var(--display); font-weight: 600; font-size: clamp(3.6rem, 1.4rem + 10vw, 9rem); line-height: 0.86; letter-spacing: -0.045em; margin: 0; }
+.hero .hi { margin: 28px 0 0; max-width: 34ch; font-family: var(--display); font-weight: 500; font-size: clamp(1.4rem, 1.1rem + 1.3vw, 2rem); line-height: 1.2; letter-spacing: -0.01em; text-wrap: balance; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px; }
+.chip { font-family: var(--pixel); font-size: 0.68rem; border: 1.5px solid var(--ink); border-radius: 999px; padding: 4px 12px; background: var(--paper); }
+.chip.on { background: var(--ink); color: var(--pink); }
+
+/* ticker */
+.ticker { background: var(--ink); color: var(--pink); overflow: hidden; }
+.ticker-track { display: flex; width: max-content; font-family: var(--pixel); font-size: 0.74rem; padding-block: 9px; white-space: nowrap; }
+.ticker-track span { padding-right: 2.4rem; }
+@media (prefers-reduced-motion: no-preference) {
+  .ticker-track { animation: slide 40s linear infinite; }
+  @keyframes slide { to { transform: translateX(-50%); } }
+}
+
+/* sections */
+section.block { padding-block: clamp(48px, 7vw, 72px) 0; }
+.lab { font-family: var(--pixel); font-size: 0.7rem; color: var(--pink-deep); display: block; margin-bottom: 6px; }
+h2 { font-family: var(--display); font-weight: 700; font-size: clamp(2rem, 1.5rem + 2vw, 2.8rem); letter-spacing: -0.035em; line-height: 1; margin: 0 0 22px; }
+p { margin: 0 0 16px; }
+.muted { color: var(--muted); }
+
+/* work list */
+.job { padding-block: 22px; border-top: 1.5px solid var(--ink); }
+.job:last-child { border-bottom: 1.5px solid var(--ink); }
+.job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4px 16px; flex-wrap: wrap; margin-bottom: 8px; }
+.job h3 { font-family: var(--display); font-weight: 600; font-size: 1.4rem; letter-spacing: -0.015em; line-height: 1.15; margin: 0; }
+.job h3 small { display: block; font-family: var(--body); font-weight: 400; font-size: 0.92rem; color: var(--muted); letter-spacing: 0; margin-top: 2px; }
+.when { font-family: var(--pixel); font-size: 0.64rem; white-space: nowrap; }
+.job p:last-child { margin-bottom: 0; }
+
+/* projects */
+.proj { border: 1.5px solid var(--ink); border-radius: 16px; padding: 22px; display: grid; gap: 10px; }
+.proj + .proj { margin-top: 14px; }
+.proj-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.proj h3 { font-family: var(--display); font-weight: 600; font-size: 1.4rem; letter-spacing: -0.015em; margin: 0; }
+.state { font-family: var(--pixel); font-size: 0.62rem; padding: 3px 9px; border-radius: 999px; background: var(--ink); color: var(--pink); }
+.state.soon { background: var(--blush); color: var(--ink); }
+.proj p { margin: 0; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tags span { font-size: 0.8rem; border: 1.5px solid var(--ink); border-radius: 999px; padding: 1px 10px; }
+.proj.soon { border-style: dashed; }
+
+/* stack */
+.stack { display: grid; gap: 14px; }
+.stack div { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 12px; align-items: start; }
+.stack b { font-family: var(--pixel); font-weight: 400; font-size: 0.66rem; padding-top: 4px; }
+
+/* outside */
+.two { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.two h3 { font-family: var(--display); font-weight: 600; font-size: 1.25rem; margin: 0 0 6px; letter-spacing: -0.01em; }
+.two p { margin: 0; }
+
+/* contact */
+.contact { background: var(--pink); margin-top: clamp(64px, 9vw, 96px); border-top: 2px solid var(--ink); }
+.contact .wrap { padding-block: clamp(44px, 7vw, 80px); display: grid; gap: 18px; }
+.contact h2 { margin: 0; max-width: 16ch; text-wrap: balance; }
+.contact p { margin: 0; max-width: 52ch; }
+.row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.email { font-weight: 500; user-select: all; padding: 8px 16px; background: var(--paper); border: 1.5px solid var(--ink); border-radius: 999px; overflow-wrap: anywhere; }
+.btn { font-family: var(--pixel); font-size: 0.7rem; padding: 10px 16px; border-radius: 999px; cursor: pointer; border: 1.5px solid var(--ink); background: var(--ink); color: var(--pink); text-decoration: none; }
+.btn:hover { background: var(--paper); color: var(--ink); }
+.btn.ghost { background: transparent; color: var(--ink); }
+.btn.ghost:hover { background: var(--ink); color: var(--pink); }
+.foot { font-family: var(--pixel); font-size: 0.62rem; }
+
+@media (max-width: 600px) {
+  .two { grid-template-columns: minmax(0, 1fr); }
+}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top">diya mohan</a>
+    <nav class="nav" aria-label="Sections">
+      <a href="#about">about</a>
+      <a href="#work">work</a>
+      <a href="#projects">projects</a>
+      <a href="#stack">stack</a>
+      <a href="#contact">say hi</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="wrap">
+    <h1>hi, i'm<br>diya</h1>
+    <p class="hi">I like finding the annoying step in someone's day and getting rid of it.</p>
+    <div class="chips">
+      <span class="chip on">✦ open to product + data roles</span>
+      <span class="chip">georgia tech · ms analytics</span>
+      <span class="chip">atlanta</span>
+    </div>
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track">
+    <span>✦ currently finishing my master's</span><span>✦ graduating december 2026</span><span>✦ ex rivian &amp; vw</span><span>✦ ex ups</span><span>✦ ex emory healthcare</span><span>✦ will talk about ci pipelines for fun</span>
+    <span>✦ currently finishing my master's</span><span>✦ graduating december 2026</span><span>✦ ex rivian &amp; vw</span><span>✦ ex ups</span><span>✦ ex emory healthcare</span><span>✦ will talk about ci pipelines for fun</span>
+  </div>
+</div>
+
+<main class="wrap">
+  <section class="block" id="about">
+    <span class="lab">about</span>
+    <h2>a little about me</h2>
+    <p>I'm finishing my master's in analytics at Georgia Tech this December. Before that I did my undergrad here in industrial engineering, which is basically four years of asking why something takes longer than it should.</p>
+    <p>That question has followed me into every job I've had. At a hospital it was provider paperwork. At UPS it was data pipelines nobody could see inside. At Rivian and Volkswagen it was developers checking build status by hand. The work looks different each time, but I always start the same way: watch how people actually work, then build the thing that saves them the trip.</p>
+    <p>I sit somewhere between engineering and product. I like writing the code, but I like figuring out what's worth building even more.</p>
+  </section>
+
+  <section class="block" id="work">
+    <span class="lab">work</span>
+    <h2>where i've been</h2>
+
+    <article class="job">
+      <div class="job-head">
+        <h3>Rivian and Volkswagen Group Technologies<small>DevOps intern, build &amp; release · Irvine, CA</small></h3>
+        <span class="when">jun–sep 2026</span>
+      </div>
+      <p>Over 200 developers kept stopping what they were doing to go check whether their CI jobs had passed. I built a Chrome extension that shows that status right in the browser instead. I also wrote a pre-commit hook that makes sure each of our 800 critical jobs has a real owner when it fails, and worked with backend engineers on a FastAPI service that made commit vault updates about 80% faster.</p>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3>UPS<small>Cloud data engineering co-op, enterprise finance · Atlanta</small></h3>
+        <span class="when">may–dec 2025</span>
+      </div>
+      <p>The finance team had 350+ data pipelines and no easy way to tell when one broke. I set up monitoring in BigQuery so failures actually show up somewhere, which cut the time people spent digging by about 60%. The dashboards I built along the way also showed which jobs were wasting money, and fixing those brought the monthly cloud bill down around 15%.</p>
+    </article>
+
+    <article class="job">
+      <div class="job-head">
+        <h3>Emory Healthcare<small>Business process analyst intern · Atlanta</small></h3>
+        <span class="when">sep 2024–may 2025</span>
+      </div>
+      <p>New providers were waiting too long to get credentialed, and every department had a different theory about why. I talked to people in more than ten of them, mapped where applications really got stuck, and helped redesign the process. Onboarding got about 25% faster, and a Power BI dashboard over 1,000+ applications gave leadership one shared picture to argue over instead of ten.</p>
+    </article>
+  </section>
+
+  <section class="block" id="projects">
+    <span class="lab">projects</span>
+    <h2>things i'm building</h2>
+
+    <article class="proj">
+      <div class="proj-top">
+        <h3>Admissions prediction for Lake Forest College</h3>
+        <span class="state">in progress</span>
+      </div>
+      <p>My master's practicum. We're helping a small college figure out which prospective students are likely to apply, from 630K+ CRM records where fewer than 1 in 300 people convert. Our first model scored suspiciously well, and it turned out four fields were quietly giving away the answer. Taking them out made the numbers look worse and the model actually useful. Right now the top 5% of prospects it ranks hold over half of the real conversions.</p>
+      <div class="tags"><span>python</span><span>scikit-learn</span><span>xgboost</span><span>shap</span></div>
+    </article>
+
+    <article class="proj">
+      <div class="proj-top">
+        <h3>CI status in your browser</h3>
+        <span class="state">shipped at work</span>
+      </div>
+      <p>The Chrome extension from my Rivian and VW internship. Small idea: put the answer where people are already looking so they don't have to go hunting for it.</p>
+      <div class="tags"><span>javascript</span><span>chrome extensions</span><span>gitlab ci</span></div>
+    </article>
+
+    <article class="proj soon">
+      <div class="proj-top">
+        <h3>More coming</h3>
+        <span class="state soon">moving them over</span>
+      </div>
+      <p class="muted">A few older projects are still sitting on my other laptop. I'm putting them on GitHub and they'll show up here soon.</p>
+    </article>
+  </section>
+
+  <section class="block" id="stack">
+    <span class="lab">stack</span>
+    <h2>what i work with</h2>
+    <div class="stack">
+      <div><b>code</b><div class="tags"><span>python</span><span>sql</span><span>javascript</span><span>r</span><span>fastapi</span></div></div>
+      <div><b>data</b><div class="tags"><span>pandas</span><span>scikit-learn</span><span>xgboost</span><span>tensorflow</span><span>spark</span><span>bigquery</span></div></div>
+      <div><b>infra</b><div class="tags"><span>aws</span><span>gcp</span><span>docker</span><span>kubernetes</span><span>gitlab ci/cd</span></div></div>
+      <div><b>see it</b><div class="tags"><span>power bi</span><span>tableau</span><span>grafana</span><span>datadog</span></div></div>
+    </div>
+  </section>
+
+  <section class="block" id="outside">
+    <span class="lab">outside work</span>
+    <h2>when i'm not at a desk</h2>
+    <div class="two">
+      <div>
+        <h3>teaching</h3>
+        <p>I TA'd two Georgia Tech courses for over a year, decision &amp; data analytics and stochastic manufacturing systems. Explaining Markov chains to 100+ students teaches you very quickly what you actually understand.</p>
+      </div>
+      <div>
+        <h3>gt pulse</h3>
+        <p>I was the finance officer for our competitive dance team. That meant a $10K yearly budget, a $23K trip to nationals that didn't go over, and a lot of emails asking businesses to sponsor us.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>say hi</h2>
+    <p>I'm looking for product and data roles starting after December 2026. If you're working on something interesting, I'd love to hear about it.</p>
+    <div class="row">
+      <span class="email" id="email">dmohan32@gatech.edu</span>
+      <button class="btn" id="copy" type="button">copy email</button>
+      <a class="btn ghost" href="https://www.linkedin.com/in/diyamohann/" target="_blank" rel="noopener">linkedin ↗</a>
+      <!-- add your GitHub here once it's set up:
+      <a class="btn ghost" href="https://github.com/YOUR-USERNAME" target="_blank" rel="noopener">github ↗</a> -->
+    </div>
+    <p class="foot">✦ made by diya · 2026</p>
+  </div>
+</section>
+
+<script>
+(function () {
+  var btn = document.getElementById('copy');
+  var email = document.getElementById('email');
+  function selectIt() {
+    var r = document.createRange(); r.selectNodeContents(email);
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    btn.textContent = 'selected ✦ copy it';
+  }
+  btn.addEventListener('click', function () {
+    try {
+      navigator.clipboard.writeText(email.textContent.trim()).then(function () {
+        btn.textContent = 'copied ✦';
+        setTimeout(function () { btn.textContent = 'copy email'; }, 1800);
+      }, selectIt);
+    } catch (e) { selectIt(); }
+  });
+})();
+</script>
+
+</body>
+</html>
